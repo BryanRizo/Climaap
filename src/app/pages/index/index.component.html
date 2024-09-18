@@ -1,0 +1,23 @@
+<div class="row g-4">
+    <div class="col-12">
+        <div class="row justify-content-between align-items-center">
+            <div class="col-auto">
+                <h1>{{ciudadSelected?.ciudad + '/' + ciudadSelected?.continente}}</h1>
+            </div>
+            <div class="col-auto">
+               <app-agregar-cuidad></app-agregar-cuidad>
+            </div>
+        </div>
+    </div>
+    <div class="col-5">
+        <label for="cantDay" class="pb-2" >Días de pronóstico:</label>
+        <select name="cantDay" id="cantDay" class="form-select" [(ngModel)]="selectedDays" (change)="onDaysChange()">
+            <option *ngFor="let item of opcionesDias" [value]="item">{{item}}</option>
+          </select>
+    </div>
+    <div class="col-12">
+        <code class="text-brick">
+            {{datosClimaticos |json}}
+        </code>
+    </div>
+</div>

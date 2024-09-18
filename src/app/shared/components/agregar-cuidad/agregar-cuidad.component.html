@@ -1,0 +1,63 @@
+<button class="btn btn-primary p-3" (click)="openModal(template)">Agregar ubicación <i
+        class="bi bi-plus-lg"></i></button>
+
+
+<ng-template #template>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Agregar ubicación</h4>
+        <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
+            <span class="visually-hidden">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <form autocomplete="off" class="row g-3" [formGroup]="ciudadForm">
+            <div class="col-12">
+                <label for="ciudad" class="pb-2">Nombre de la ciudad</label>
+                <input formControlName="ciudad" type="text" placeholder="Ingresar nombre de la ciudad"
+                    class="form-control" id="ciudad">
+                <span *ngIf="isValidField('ciudad')" class="text-danger">
+                    {{ getFieldError('ciudad') }}
+                </span>
+            </div>
+            <div class="col-12">
+                <label for="latitud" class="pb-2">Latitud</label>
+                <input appLatitudeLongitudeMask formControlName="latitud" type="text" placeholder="Ingresar latitud"
+                    class="form-control" id="latitud">
+                <span *ngIf="isValidField('latitud')" class="text-danger">
+                    {{ getFieldError('latitud') }}
+                </span>
+            </div>
+            <div class="col-12">
+                <label for="longitud" class="pb-2">Longitud</label>
+                <input appLatitudeLongitudeMask formControlName="longitud" type="text" placeholder="Ingresar longitud"
+                    class="form-control" id="longitud">
+                <span *ngIf="isValidField('longitud')" class="text-danger">
+                    {{ getFieldError('longitud') }}
+                </span>
+            </div>
+            <div class="col-12">
+                <label for="longitud" class="pb-2">Seleccionar continente</label>
+                <select formControlName="continente" id="continentSelect" class="form-control">
+                    <option *ngFor="let continent of continents" [value]="continent">{{ continent }}</option>
+                </select>
+                <span *ngIf="isValidField('continente')" class="text-danger">
+                    {{ getFieldError('continente') }}
+                </span>
+            </div>
+            <div class="col-12">
+                <div class="row g-3 justify-content-end">
+                    <div class="col-4">
+                        <button class="btn btn-primary w-100" (click)="onSubmit()">
+                            Guardar
+                        </button>
+                    </div>
+                    <div class="col-4">
+                        <button class="btn btn-secondary w-100" type="button" (click)="modalRef?.hide()">
+                            Cancelar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</ng-template>

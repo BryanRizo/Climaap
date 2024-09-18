@@ -1,0 +1,65 @@
+.container-location {
+    height: 100%;
+    padding: 0 3px;
+}
+
+.location-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    padding: 2rem 1.5rem;
+}
+
+.location-cards li {
+    list-style: none;
+    min-height: 100px;
+    width: 100%;
+}
+
+.location-cards li button {
+    position: relative;
+    overflow: hidden;
+    background: var(--color-white);
+    border-radius: 1rem;
+    padding: 1rem;
+    height: 100%;
+    display: flex;
+    width: 100%;
+    transition: all 300ms ease-in-out;
+}
+
+.location-cards li button:focus {
+    outline-color: var(--color-blue);
+}
+
+.location-cards li button:hover {
+    box-shadow: rgba(247, 247, 255, 0.4) -5px 5px, rgba(247, 247, 255, 0.3) -10px 10px;
+}
+
+.location-cards li button .info {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 2;
+}
+
+.location-cards li button .info .title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+
+.location-cards li button .info .subtitle {
+    text-align: left;
+}
+
+.location-cards li button .bg-icon {
+    position: absolute;
+    right: -35px;
+    top: -41px;
+    z-index: 1;
+}

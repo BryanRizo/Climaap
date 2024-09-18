@@ -1,0 +1,56 @@
+/* You can add global styles to this file, and also import other style files */
+
+* {
+    --color-brick: #b33e2c;
+    --color-white: #f7f7ff;
+    --color-onyx: #393e41;
+    --color-blue: #3370a2;
+    --color-yellow: #f1d302;
+    --header-height: 75px;
+    --asidebar-width: 425px;
+
+
+
+    /* RESET DE VALORES */
+    color: var(--color-onyx);
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+
+.btn-primary {
+    --bs-btn-hover-color: var(--color-white) !important;
+    --bs-btn-hover-bg: var(--color-blue) !important;
+    --bs-btn-hover-border-color: var(--color-blue) !important;
+    --bs-btn-focus-shadow-rgb:var(--color-blue) !important; 
+    --bs-btn-active-color:  var(--color-white) !important;
+    --bs-btn-active-bg: var(--color-blue) !important;
+    --bs-btn-active-border-color: var(--color-blue) !important;
+    --bs-btn-active-shadow: inset 0 3px 5px;
+    --bs-btn-bg: var(--color-blue) !important;
+    --bs-btn-border-color: var(--color-blue) !important;
+}
+
+.text-yellow {
+    color: var(--color-yellow);
+}
+
+.text-brick {
+    color: var(--color-brick);
+}
+
+/* BOTONES */
+.btn-primary i {
+    color: var(--color-white);
+}
+
+.btn-secondary {
+    background-color: var(--color-white) !important;
+    color: var(--color-blue) !important;
+}
+
+.btn:focus {
+    box-shadow: 0 0 0 .25rem rgba(13, 110, 253, .25) !important;
+}

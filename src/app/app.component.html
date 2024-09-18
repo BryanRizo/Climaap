@@ -1,0 +1,52 @@
+<app-loadding></app-loadding>
+<header class="header-layout">
+  <div> 
+    <i class="bi bi-brightness-high-fill text-yellow"></i>
+  </div>
+  <h2> Climaap
+  </h2>
+</header>
+<main class="main-layout">
+  <aside>
+      <app-cards></app-cards>
+      <div class="d-flex justify-content-center m-3">
+        <button (click)="eliminarClima()" class="btn text-white">Eliminar ciudades</button>
+      </div>
+  </aside>
+  <section class="main-container">
+    <router-outlet />
+  </section>
+</main>
+
+
+
+<!-- <div class="container-fluid">
+  <div class="row">
+    <div class="col-12 make-believe-header">
+      <h1>
+        App de pronóstico climático
+      </h1>
+    </div>
+  </div>
+  <div class="row mt-4">
+    <div class="col-3">
+      <div class="row">
+        <div class="col-12 d-flex justify-content-center">
+          <div class="menu-title">
+            Ubicaciones disponibles
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-12 pill-container">
+          @for(pill of pills; track pill.id){
+            <app-pill [pillText]="pill.pillText" />
+          }
+        </div>
+      </div>
+    </div>
+    <div class="col-9">
+      
+    </div>
+  </div>
+</div> -->

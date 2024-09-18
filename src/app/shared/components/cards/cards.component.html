@@ -1,0 +1,15 @@
+<div class="container-location">
+    <ul class="location-cards">
+        <li *ngFor="let ciudad of ciudadesClima">
+            <button (click)="cambiarSelectedCiudad(ciudad)">
+                <div class="info">
+                    <span class="title">{{ciudad.ciudad}}</span>
+                    <span class="subtitle">{{ciudad.continente}}</span>
+                </div>
+                <div class="bg-icon">
+                    <svg-mundi></svg-mundi>
+                </div>
+            </button>
+        </li>
+    </ul>
+</div>
